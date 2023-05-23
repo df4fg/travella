@@ -1,0 +1,321 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html><html lang='en' class=''>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/ryanparag/pen/oWrLPr?depth=everything&order=popularity&page=5&q=card+list&show_forks=false" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<style class="cp-pen-styles">@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800");
+
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=El+Messiri:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Kufam:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Lemonada:wght@300;400;500;600;700&display=swap');
+
+body {
+
+  background: url(5570027.jpg);
+  font-size: 14px;
+  color: #cfd6e1;
+  line-height: 1.5;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+a {
+  text-decoration: none;
+}
+
+.movie-card {
+  background-image: url(2k.jpg);
+  background-size: contain;
+  background-position: -40% 80%;
+  background-repeat: no-repeat;
+  width: 75%;
+  max-width: 800px;
+  height: 300px;
+  display: block;
+  margin: 8vh auto;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
+.movie-card:nth-child(2) {
+  background-image: url(3k.jpg);
+  background-position: -20% 80%;
+}
+
+.movie-card:nth-child(3) {
+  background-image: url(4kks.webp);
+  background-position: -20% 80%;
+}
+
+.movie-card:nth-child(4) {
+  background-image: url(logo.jpeg);
+  background-position: 10% 80%;
+}
+
+
+.color-overlay {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(42, 159, 255, 0.2)), color-stop(60%, #212120), to(#212120));
+  background: linear-gradient(to right, rgba(42, 159, 255, 0.2) 0%, #212120 60%, #212120 100%);
+  background-blend-mode: multiply;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.movie-content {
+  width: 40%;
+  display: block;
+  position: relative;
+  float: right;
+  padding-right: 1em;
+}
+.movie-content .movie-title {
+  font-family: 'Kufam', sans-serif;
+  color: #ffffff;
+  margin-bottom: .25em;
+  opacity: .75;
+}
+.movie-content .movie-info {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.5em;
+  color: #2a9fff;
+  line-height: 1;
+  margin: 0;
+  opacity: .5;
+}
+.movie-content .movie-header {
+  margin-bottom: 2em;
+}
+.movie-content .movie-desc {
+  font-weight: 300;
+  opacity: .84;
+  margin-bottom: 2em;
+}
+
+.btn {
+  padding: .8em 2em;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 3px solid #ffffff;
+}
+
+#btn::before {
+  font-family: 'Material Icons';
+  content: '\e037';
+  vertical-align: middle;
+  font-size: 1.5em;
+  padding-right: .5em;
+}
+
+#btn:hover {
+  border-color: #2a9fff;
+  color: #2a9fff;
+  -webkit-box-shadow: 0px 1px 8px 0px rgba(245, 199, 0, 0.2);
+          box-shadow: 0px 1px 8px 0px rgba(245, 199, 0, 0.2);
+}
+
+.movie-share {
+  padding: 1em;
+  display: inline-block;
+  width: 15%;
+}
+
+.movie-share__icon i {
+  font-size: 1.2em;
+  margin-left: .5em;
+  color: #ffffff;
+  mix-blend-mode: lighten;
+  opacity: .4;
+}
+
+.movie-share__icon i:hover {
+  opacity: 1;
+  mix-blend-mode: lighten;
+}
+
+@media (max-width: 1000px) {
+  .movie-content {
+    width: 50%;
+    max-width: 95%;
+  }
+}
+@media (max-width: 800px) {
+  .movie-card {
+    width: 95%;
+    max-width: 95%;
+  }
+}
+@media (max-width: 600px) {
+  .movie-card, .movie-card:nth-child(2), .movie-card:nth-child(3) {
+    background-position: 50% 0%;
+    background-size: cover;
+    height: 400px;
+  }
+
+  .color-overlay {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(42, 159, 255, 0.2)), color-stop(60%, #212120), to(#212120));
+    background: linear-gradient(to bottom, rgba(42, 159, 255, 0.2) 0%, #212120 60%, #212120 100%);
+  }
+
+  .movie-content {
+    margin-top: 4.2em;
+    width: 90%;
+  }
+
+  .movie-share {
+    display: block;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<link rel="stylesheet" href="index.css">
+<body>
+    <a  href="https://api.whatsapp.com/send/?phone=9647744112322&text&type=phone_number&app_absent=0"><img  id="logo" src="logo.jpeg" alt=""></a>
+<div id="movie-card-list">
+	<!-- Card 1: Blade Runner -->
+	<div class="movie-card">
+		<div class="color-overlay">
+			<div class="movie-share">
+
+					<a class="movie-share__icon" href="https://api.whatsapp.com/send/?phone=9647744112322&text&type=phone_number&app_absent=0">
+						<i class="material-icons">&#xe253</i>
+					</a>
+
+
+
+
+				</div>
+			<div class="movie-content">
+				<div class="movie-header">
+					<h1 class="movie-title">مكة المكرمة</h1>
+					<h4 class="movie-info">رحلة الى</h4>
+				</div>
+				<p class="movie-desc">A blade runner must pursue and try to terminate   four replicants who stole a ship in space and have returned to Earth to find their creator.</p>
+				<a id="btn" class="btn btn-outline" href="deta.html">تفاصيل الرحلة</a>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Card 2: Back to the Future -->
+	<div class="movie-card">
+		<div class="color-overlay">
+			<div class="movie-share">
+
+					<a class="movie-share__icon" href="https://api.whatsapp.com/send/?phone=9647744112322&text&type=phone_number&app_absent=0">
+						<i class="material-icons">&#xe253</i>
+					</a>
+
+				</div>
+			<div class="movie-content">
+				<div class="movie-header">
+					<h1 class="movie-title">ايران</h1>
+					<h4 class="movie-info">رحلة الى</h4>
+				</div>
+				<p class="movie-desc">Marty McFly, a 17-year-old high , four replicants who stole a ship the maverick scientist Doc Brown. </p>
+				<a id="btn" class="btn btn-outline" href="deta.html">تفاصيل الرحلة</a>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Card 3: Akira -->
+	<div class="movie-card">
+		<div class="color-overlay">
+			<div class="movie-share">
+
+					<a class="movie-share__icon" href="https://api.whatsapp.com/send/?phone=9647744112322&text&type=phone_number&app_absent=0">
+						<i class="material-icons">&#xe253</i>
+					</a>
+
+				</div>
+			<div class="movie-content">
+				<div class="movie-header">
+					<h1 class="movie-title">سوريا</h1>
+					<h4 class="movie-info">رحلة الى</h4>
+				</div>
+				<p class="movie-desc">A secret military project endangers Neo-Tokyo when it turns a bikerf psychics can stop. </p>
+				<a id="btn" class="btn btn-outline" href="deta.html">تفاصيل الرحلة</a>
+
+			</div>
+		</div>
+	</div>
+
+    <div class="movie-card">
+		<div class="color-overlay">
+			<div class="movie-share">
+
+					<a class="movie-share__icon" href="#">
+						<i class="material-icons">&#xe253</i>
+					</a>
+
+				</div>
+			<div class="movie-content">
+				<div class="movie-header">
+					<h1 class="movie-title">صور الرحلات</h1>
+					<h4 class="movie-info">رحلة الى</h4>
+				</div>
+				<p class="movie-desc">A secret military project endangers Neo-Tooup of psychics can stop. </p>
+				<a id="btn" class="btn btn-outline" href="gallry.html"> اظهار الصور</a>
+
+			</div>
+		</div>
+	</div>
+
+
+    <div id="footer" class=" my-5">
+
+        <footer class="text-center text-lg-start" style="background-color: #db6930;">
+          <div class="container d-flex justify-content-center py-5">
+      
+            <a class="btn btn-primary btn-lg btn-floating mx-2" href="https://www.facebook.com/profile.php?id=100064566947227">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="btn btn-primary btn-lg btn-floating mx-2" href="https://www.youtube.com/@user-fc8bg2fd5b/videos">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a class="btn btn-primary btn-lg btn-floating mx-2" href="https://api.whatsapp.com/send/?phone=9647744112322&text&type=phone_number&app_absent=0">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+      
+          </div>
+      
+          <!-- Copyright -->
+          <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <h1>العنوان</h1>
+            <h2>بغداد - حي اور- مجاور جامع عمار بن ياسر </h2>
+            <h1>ارقام الهاتف</h1>
+               <h1>07744112322</h1> <br>
+          </div>
+          <!-- Copyright -->
+        </footer>
+        
+      </div>
+
+</div>
+
+
+</body>
+</html>

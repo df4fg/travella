@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Lemonada:wght@300;400;500;600;700&family=Marhey:wght@300;400;500;600;700&family=Readex+Pro:wght@200;300;400;500;600;700&family=Reem+Kufi+Ink&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a img{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+}
+body{
+    background: url(5570027.jpg);
+    overflow-x: hidden;
+
+}
+.xxcont{
+    height: 100vh; width: 100%;
+    font-family: 'Lemonada', cursive;
+    
+    display: flex;
+    justify-content: center;
+}  
+
+#logo{
+    position: fixed;
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    z-index: 100;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+}
+#titl{
+    position: relative;
+    left: 35%;
+    top: 20%;
+    font-size: 5rem;
+}
+
+.containerx{
+ height: 100%; width: 80%;
+ display: grid;
+ grid-template-columns: repeat(1,80%);
+ grid-template-rows: repeat(2,400px);
+ justify-content: center;
+ grid-gap: 20px;
+
+}
+.wrapper{
+    background-color: rgb(255, 255, 255);
+    border-radius: 60px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.imgs{
+    height: 100%;
+
+}
+.imgs img{
+    width: 800px;
+    height: 100%;
+    border-radius: 60px 0px 0px 60px;
+    -webkit-border-radius: 60px 0px 0px 60px;
+    -moz-border-radius: 200px 0px 0px 200px;
+
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+
+}
+.head{
+    text-align: center;
+}
+.text h1{
+    color: gold;
+    font-size: 2.7rem;
+}
+.text a{
+    text-decoration: none;
+    border: gold 2px solid;
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 500;
+
+}
+
+.text a:hover{
+    background-color: gold;
+    color: white;
+}
+
+#footer{
+    position: absolute;
+    top: 270%;
+    width: 100%;
+}
+
+
+/* Styles for mobile devices */
+@media screen and (max-width: 767px) {
+    /* CSS rules for mobile */
+
+  }
+  
+  /* Styles for tablets */
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* CSS rules for tablets */
+
+  }
+  
+  /* Styles for laptops/desktops */
+  @media screen and (min-width: 1024px) {
+    /* CSS rules for laptops/desktops */
+
+  }
+  
+  /* Styles for small phones */
+  @media screen and (max-width: 480px) {
+    /* CSS rules for small phones */
+
+    .containerx{
+        height: 100%; width: 80%;
+        display: grid;
+        grid-template-columns: repeat(1,80%);
+        grid-template-rows: repeat(1,200px);
+        justify-content: center;
+        grid-gap: 20px;
+       
+       }
+
+  }
+  
